@@ -156,7 +156,7 @@ base_model:
 - l3utterfly/mistral-7b-v0.1-layla-v4
 ```
 
-The Hub will infer the type of relationship from the current model to the base model (`"adapter", "merge", "quantized", "finetune"`) but you can also set it explicitly if needed: `base_model_relation: quantized` for instance.
+The Hub will infer the type of relationship from the current model to the base model (`"adapter", "merge", "quantized", "finetune"`) but you can also set it explicitly if needed: `base_model_relation: merge` for instance.
 
 ### Specifying a new version
 
