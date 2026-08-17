@@ -9,6 +9,7 @@ on:
 
 jobs:
   delete:
+    if: ${{ github.repository == 'huggingface/hub-docs' }}
     uses: huggingface/doc-builder/.github/workflows/delete_doc_comment.yml@main
     secrets:
       comment_bot_token: ${{ secrets.COMMENT_BOT_TOKEN }}
