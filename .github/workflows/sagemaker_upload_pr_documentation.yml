@@ -8,6 +8,10 @@ on:
 
 jobs:
   build:
+    # The reusable upload workflow needs organization secrets that are not
+    # available to public forks. Only run it in the upstream repository after
+    # the documentation build completed successfully.
+    if: ${{ github.repository == 'huggingface/hub-docs' && github.event.workflow_run.conclusion == 'success' }}
     uses: huggingface/doc-builder/.github/workflows/upload_pr_documentation.yml@main
     with:
       package_name: sagemaker
